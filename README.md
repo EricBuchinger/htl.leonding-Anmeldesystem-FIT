@@ -1,0 +1,2 @@
+# htl.leonding-Anmeldesystem-FIT
+Bei dem jährlich stattfindenden FIT der HTL Leonding nehmen traditionell sehr viele Firmen aus der Region teil. Diese Firmen melden sich derzeit über eine Website an. Diese Website ist schon etwas in die Jahre gekommen, teilweise sehr kompliziert wie z.B beim editieren und hinzufügen von Ausstellungsstände und nicht mehr auf dem neuersten Stand. Mit dem FitLog soll eine benutzerfreundliche moderne Website sowohl für die Firmen als auch die Admins geschaffen werden. 
