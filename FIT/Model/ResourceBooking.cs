@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class ResourceBooking
+    public class ResourceBooking
     {
         public int Id { get; set; }
         [Required]

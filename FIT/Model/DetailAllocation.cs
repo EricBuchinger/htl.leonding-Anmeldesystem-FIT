@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class DetailAllocation
+    public class DetailAllocation
     {
         public int Id { get; set; }
         [Required]

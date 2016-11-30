@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Resource
+    public class Resource
     {
         public int Id { get; set; }
         [Required]

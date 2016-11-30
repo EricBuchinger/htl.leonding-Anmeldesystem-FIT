@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Booking
+    public class Booking
     {
         public int Id { get; set; }
         [Required]
