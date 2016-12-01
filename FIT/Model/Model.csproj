@@ -65,6 +65,8 @@
     <Compile Include="Representative.cs" />
     <Compile Include="Resource.cs" />
     <Compile Include="ResourceBooking.cs" />
+    <Compile Include="Validation\EmailValidation.cs" />
+    <Compile Include="Validation\HomepageValidation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
