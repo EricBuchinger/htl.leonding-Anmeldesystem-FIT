@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Location
+    public class Location : EntityObject
     {
         public int Id { get; set; }
         [Required]

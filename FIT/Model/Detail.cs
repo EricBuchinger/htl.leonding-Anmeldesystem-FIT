@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Detail 
+    public class Detail : EntityObject
     {
         public int Id { get; set; }
         [Required]

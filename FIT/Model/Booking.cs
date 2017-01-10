@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Booking 
+    public class Booking : EntityObject
     {
         public int Id { get; set; }
         [Required]

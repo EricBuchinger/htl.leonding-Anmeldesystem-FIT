@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Contact : Person
+    public class Contact : Person 
     {
     }
 }

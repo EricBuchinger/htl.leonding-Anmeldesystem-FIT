@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class DetailAllocation 
+    public class DetailAllocation : EntityObject
     {
         public int Id { get; set; }
         [Required]

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Area 
+    public class Area :EntityObject
     {
         public int Id { get; set; }
         [Required]

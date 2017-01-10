@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Address 
+    public class Address : EntityObject
     {
         
         public int Id { get; set; } 

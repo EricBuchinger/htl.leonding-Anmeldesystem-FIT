@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Company
+    public class Company : EntityObject
     {
         public int Id { get; set; }
         [Required]

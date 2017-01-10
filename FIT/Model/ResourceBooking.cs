@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class ResourceBooking
+    public class ResourceBooking : EntityObject
     {
         public int Id { get; set; }
         [Required]
