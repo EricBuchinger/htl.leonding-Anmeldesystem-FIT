@@ -34,5 +34,8 @@ namespace Model
         [Required]
         public byte[] CompanySign { get; set; }
 
+        [Required]
+        public string SubjectAreas { get; set; }
+
     }
 }
