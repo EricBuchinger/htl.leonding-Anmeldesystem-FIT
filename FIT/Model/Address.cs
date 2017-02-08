@@ -11,7 +11,6 @@ namespace Model
     public class Address : EntityObject
     {
         
-        public int Id { get; set; } 
         [Required]
         [MaxLength(25)]
         public string City { get; set; }

@@ -10,7 +10,6 @@ namespace Model
 {
     public class Location : EntityObject
     {
-        public int Id { get; set; }
         [Required]
         public int Number { get; set; }
         [Required]

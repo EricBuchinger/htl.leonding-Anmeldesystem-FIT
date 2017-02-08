@@ -10,7 +10,6 @@ namespace Model
 {
     public class Resource : EntityObject
     {
-        public int Id { get; set; }
         [Required]
         [MaxLength(25)]
         public string Name { get; set; }

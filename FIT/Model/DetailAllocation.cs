@@ -10,7 +10,6 @@ namespace Model
 {
     public class DetailAllocation : EntityObject
     {
-        public int Id { get; set; }
         [Required]
         public Detail Detail { get; set; }
         [Required]

@@ -11,8 +11,12 @@ namespace DataAccess
     public class FitContext : DbContext
     {
 
-        public FitContext()
-            : base(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=SmartHomeDb;Integrated Security=True")
+        public FitContext() : base("name=DefaultConnection")
+        {
+
+        }
+
+        public FitContext(string nameOrConnectionString) : base(nameOrConnectionString)
         {
 
         }

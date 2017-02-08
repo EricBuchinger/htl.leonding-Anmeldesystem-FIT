@@ -10,7 +10,6 @@ namespace Model
 {
     public class Presentation : EntityObject
     {
-        public int Id { get; set; }
         [Required]
         public string RoomNumber { get; set; }
         [Required]

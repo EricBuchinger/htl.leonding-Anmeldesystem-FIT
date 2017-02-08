@@ -59,6 +59,8 @@
     <Compile Include="EntityObject.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="IEntityObject.cs" />
+    <Compile Include="IGenericRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Lecturer.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Person.cs" />

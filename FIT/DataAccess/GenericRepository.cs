@@ -13,8 +13,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-        public class GenericRepository<TEntity> where TEntity : class, IEntityObject, new()
-        {
+        public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class, IEntityObject, new()
+    {
             protected readonly DbContext _context; // Aktueller DbContext wird vom UnitOfWork übergeben
             protected readonly DbSet<TEntity> _dbSet; // Set der entsprechenden Entität im Context
 

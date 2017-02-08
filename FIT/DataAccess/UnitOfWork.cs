@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class UnitOfWork : IDisposable
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly FitContext _context = new FitContext();
         private bool _disposed;
@@ -16,128 +16,183 @@ namespace DataAccess
         ///     Konkrete Repositories. Keine Ableitung erforderlich
         /// </summary>
 
-        private GenericRepository<Address> _addressesRepository;
-        private GenericRepository<Area> _areasRepository;
-        private GenericRepository<Booking> _bookingsRepository;
-        private GenericRepository<Company> _companiesRepository;
-        private GenericRepository<Contact> _contactsRepository;
-        private GenericRepository<Detail> _detailsRepository;
-        private GenericRepository<DetailAllocation> _detailAllocationsRepository;
-        private GenericRepository<Event> _eventsRepository;
-        private GenericRepository<Lecturer> _lecturersRepository;
-        private GenericRepository<Location> _locationsRepository;
-        private GenericRepository<Person> _personsRepository;
-        private GenericRepository<Presentation> _presentationsRepository;
-        private GenericRepository<Representative> _representativesRepository;
-        private GenericRepository<Resource> _resourcesRepository;
-        private GenericRepository<ResourceBooking> _resourceBookingsRepository;
+        private GenericRepository<Address> _addressRepository;
+        private GenericRepository<Area> _areaRepository;
+        private GenericRepository<Booking> _bookingRepository;
+        private GenericRepository<Company> _companyRepository;
+        private GenericRepository<Contact> _contactRepository;
+        private GenericRepository<Detail> _detailRepository;
+        private GenericRepository<DetailAllocation> _detailAllocationRepository;
+        private GenericRepository<Event> _eventRepository;
+        private GenericRepository<Lecturer> _lecturerRepository;
+        private GenericRepository<Location> _locationRepository;
+        private GenericRepository<Person> _personRepository;
+        private GenericRepository<Presentation> _presentationRepository;
+        private GenericRepository<Representative> _representativeRepository;
+        private GenericRepository<Resource> _resourceRepository;
+        private GenericRepository<ResourceBooking> _resourceBookingRepository;
 
-        public GenericRepository<Address> AddressRepository
+        public IGenericRepository<Address> AdressRepository
         {
             get
             {
-                return _addressesRepository = new GenericRepository<Address>(_context);
-            }
-        }
-        public GenericRepository<Area> AreaRepository
-        {
-            get
-            {
-                return _areasRepository = new GenericRepository<Area>(_context);
-            }
-        }
-        public GenericRepository<Booking> BookingRepository
-        {
-            get
-            {
-                return _bookingsRepository = new GenericRepository<Booking>(_context);
-            }
-        }
-        public GenericRepository<Company> CompanyRepository
-        {
-            get
-            {
-                return _companiesRepository = new GenericRepository<Company>(_context);
-            }
-        }
-        public GenericRepository<Contact> ContactRepository
-        {
-            get
-            {
-                return _contactsRepository = new GenericRepository<Contact>(_context);
-            }
-        }
-        public GenericRepository<Detail> DeatilRepository
-        {
-            get
-            {
-                return _detailsRepository = new GenericRepository<Detail>(_context);
-            }
-        }
-        public GenericRepository<DetailAllocation> DetailAllocationRepository
-        {
-            get
-            {
-                return _detailAllocationsRepository = new GenericRepository<DetailAllocation>(_context);
-            }
-        }
-        public GenericRepository<Event> EventRepository
-        {
-            get
-            {
-                return _eventsRepository = new GenericRepository<Event>(_context);
-            }
-        }
-        public GenericRepository<Lecturer> LecturerRepository
-        {
-            get
-            {
-                return _lecturersRepository = new GenericRepository<Lecturer>(_context);
-            }
-        }
-        public GenericRepository<Location> LocationRepository
-        {
-            get
-            {
-                return _locationsRepository = new GenericRepository<Location>(_context);
-            }
-        }
-        public GenericRepository<Person> PersonRepository
-        {
-            get
-            {
-                return _personsRepository = new GenericRepository<Person>(_context);
-            }
-        }
-        public GenericRepository<Presentation> PresentationRepository
-        {
-            get
-            {
-                return _presentationsRepository = new GenericRepository<Presentation>(_context);
-            }
-        }
-        public GenericRepository<Representative> RepresentativeRepository
-        {
-            get
-            {
-                return _representativesRepository = new GenericRepository<Representative>(_context);
+                if (_addressRepository == null)
+                    _addressRepository = new GenericRepository<Address>(_context);
+                return _addressRepository;
             }
         }
 
-        public GenericRepository<Resource> ResourceRepository
+        public IGenericRepository<Area> AreaRepository
         {
             get
             {
-                return _resourcesRepository = new GenericRepository<Resource>(_context);
+                if (_areaRepository == null)
+                    _areaRepository = new GenericRepository<Area>(_context);
+                return _areaRepository;
             }
         }
 
-        public GenericRepository<ResourceBooking> ResourceBookingRepository
+        public IGenericRepository<Booking> BookingRepository
         {
             get
             {
-                return _resourceBookingsRepository = new GenericRepository<ResourceBooking>(_context);
+                if (_bookingRepository == null)
+                    _bookingRepository = new GenericRepository<Booking>(_context);
+                return _bookingRepository;
             }
+        }
+
+        public IGenericRepository<Company> CompanyRepository
+        {
+            get
+            {
+                if (_companyRepository == null)
+                    _companyRepository = new GenericRepository<Company>(_context);
+                return _companyRepository;
+            }
+        }
+
+        public IGenericRepository<Contact> ContactRepository
+        {
+            get
+            {
+                if (_contactRepository == null)
+                    _contactRepository = new GenericRepository<Contact>(_context);
+                return _contactRepository;
+            }
+        }
+
+        public IGenericRepository<Detail> DetailRepository
+        {
+            get
+            {
+                if (_detailRepository == null)
+                    _detailRepository = new GenericRepository<Detail>(_context);
+                return _detailRepository;
+            }
+        }
+
+        public IGenericRepository<DetailAllocation> DetailAllocationRepository
+        {
+            get
+            {
+                if (_detailAllocationRepository == null)
+                    _detailAllocationRepository = new GenericRepository<DetailAllocation>(_context);
+                return _detailAllocationRepository;
+            }
+
+        }
+
+        public IGenericRepository<Event> EventRepository
+        {
+            get
+            {
+                if (_eventRepository == null)
+                    _eventRepository = new GenericRepository<Event>(_context);
+                return _eventRepository;
+            }
+        }
+
+        public IGenericRepository<Lecturer> LectureRepository
+        {
+            get
+            {
+                if (_lecturerRepository == null)
+                    _lecturerRepository = new GenericRepository<Lecturer>(_context);
+                return _lecturerRepository;
+            }
+        }
+
+        public IGenericRepository<Location> LocationRepository
+        {
+            get
+            {
+                if (_locationRepository == null)
+                    _locationRepository = new GenericRepository<Location>(_context);
+                return _locationRepository;
+            }
+        }
+
+        public IGenericRepository<Person> PersonRepository
+        {
+            get
+            {
+                if (_personRepository == null)
+                    _personRepository = new GenericRepository<Person>(_context);
+                return _personRepository;
+            }
+        }
+
+        public IGenericRepository<Presentation> PresentationRepository
+        {
+            get
+            {
+                if (_presentationRepository == null)
+                    _presentationRepository = new GenericRepository<Presentation>(_context);
+                return _presentationRepository;
+            }
+        }
+
+        public IGenericRepository<Representative> RepresentativeRepository
+        {
+            get
+            {
+                if (_representativeRepository == null)
+                    _representativeRepository = new GenericRepository<Representative>(_context);
+                return _representativeRepository;
+            }
+        }
+
+        public IGenericRepository<Resource> ResourceRepository
+        {
+            get
+            {
+                if (_resourceRepository == null)
+                    _resourceRepository = new GenericRepository<Resource>(_context);
+                return _resourceRepository;
+            }
+        }
+
+        public IGenericRepository<ResourceBooking> ResourceBookingRepository
+        {
+            get
+            {
+                if (_resourceBookingRepository == null)
+                    _resourceBookingRepository = new GenericRepository<ResourceBooking>(_context);
+                return _resourceBookingRepository;
+            }
+        }
+
+
+
+        public UnitOfWork(string connectionString)
+        {
+            _context = new FitContext(connectionString);
+        }
+
+        public UnitOfWork() : this("name=DefaultConnection")
+        {
+
         }
 
 
@@ -165,6 +220,11 @@ namespace DataAccess
                 }
             }
             _disposed = true;
+        }
+
+        public void DeleteDatabase()
+        {
+            _context.Database.Delete();
         }
     }
 }

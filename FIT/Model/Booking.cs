@@ -10,7 +10,6 @@ namespace Model
 {
     public class Booking : EntityObject
     {
-        public int Id { get; set; }
         [Required]
         public Event Event { get; set; }
         [Required]

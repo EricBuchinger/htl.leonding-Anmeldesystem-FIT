@@ -9,7 +9,6 @@ namespace Model
 {
     public class ResourceBooking : EntityObject
     {
-        public int Id { get; set; }
         [Required]
         public Booking Booking { get; set; }
         [Required]

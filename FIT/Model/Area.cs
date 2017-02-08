@@ -10,7 +10,6 @@ namespace Model
 {
     public class Area :EntityObject
     {
-        public int Id { get; set; }
         [Required]
         public string Designation { get; set; }
         [Required]
