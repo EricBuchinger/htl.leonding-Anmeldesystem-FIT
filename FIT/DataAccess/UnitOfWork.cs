@@ -31,6 +31,7 @@ namespace DataAccess
         private GenericRepository<Representative> _representativeRepository;
         private GenericRepository<Resource> _resourceRepository;
         private GenericRepository<ResourceBooking> _resourceBookingRepository;
+        private GenericRepository<Category> _categoryRepository;
 
         public IGenericRepository<Address> AdressRepository
         {
@@ -180,6 +181,15 @@ namespace DataAccess
                 if (_resourceBookingRepository == null)
                     _resourceBookingRepository = new GenericRepository<ResourceBooking>(_context);
                 return _resourceBookingRepository;
+            }
+        }
+        public IGenericRepository<Category> CategoryRepository
+        {
+            get
+            {
+                if (_categoryRepository == null)
+                    _categoryRepository = new GenericRepository<Category>(_context);
+                return _categoryRepository;
             }
         }
 
