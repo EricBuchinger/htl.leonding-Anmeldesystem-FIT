@@ -20,7 +20,7 @@ namespace Model
         [Required]
         public Address Address { get; set; }
         [Required]
-        public int Category { get; set; }
+        public Category Category { get; set; }
         [Required]
         public bool isAccepted { get; set; }
 

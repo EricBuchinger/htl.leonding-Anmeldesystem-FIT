@@ -26,6 +26,7 @@ namespace DataAccess
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Category> Categorys { get; set; }
         public DbSet<Detail> Details { get; set; }
         public DbSet<DetailAllocation> DetailAllocations { get; set; }
         public DbSet<Event> Events { get; set; }

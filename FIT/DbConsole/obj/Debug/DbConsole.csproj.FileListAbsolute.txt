@@ -1,0 +1,12 @@
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DbConsole.exe.config
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DbConsole.exe
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DbConsole.pdb
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DataAccess.dll
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\Model.dll
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.dll
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DataAccess.pdb
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\Model.pdb
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.xml
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.csprojResolveAssemblyReference.cache
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.exe
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.pdb
