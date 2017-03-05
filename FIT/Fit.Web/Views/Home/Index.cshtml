@@ -1,36 +1,49 @@
-﻿@{
+﻿@model Fit.Web.ViewModels.RequestModel
+@{
     ViewData["Title"] = "Register";
 }
 
 <head>
-    <meta charset="utf-8" />
-    <script src="~/lib/jquery/dist/jquery.fullPage.min.js"></script>
-    <link rel="stylesheet" href="~/css/jquery.fullpage.css" />
+  <link rel="stylesheet" href="~/NewFolder/demo.css" />
 </head>
 
 <body>
-    <div id="wrapper">
-        <div class="fp-section">
-
+    <div class="w3-container">
+        <h1>TryOut Page</h1>
+        <div class="flex-container">
+            <div class="flex-item">
+                <input class="form-control flexfc" asp-for="Name" placeholder="Vorname"/>
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="flex-item">
+                <input class="form-control flexfc" asp-for="Name" placeholder="Nachname"/>
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="flex-item">
+                <input class="form-control flexfc" asp-for="Name" placeholder="Firma"/>
+                <span asp-validation-for="Name"></span>
+            </div>
         </div>
-        <div class="fp-section">
-
+        <div class="flex-container">
+            <div class="flex-item">
+                <input class="form-control flexfc" asp-for="Name" placeholder="Vorname" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="flex-item">
+                <input class="form-control flexfc" asp-for="Name" placeholder="Nachname" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="flex-item">
+                <input class="form-control flexfc" asp-for="Name" placeholder="Firma" />
+                <span asp-validation-for="Name"></span>
+            </div>
         </div>
-        <div class="fp-section">
-
-        </div>
-        <div class="fp-section">
-
+        <div class="flex-container">
+            <div class="flex-item"></div>
+            <div class="flex-item">
+                <input type="submit" value="Erstellen" class="form-control btn btn-primary flexfc" />
+            </div>
+            <div class="flex-item"></div>
         </div>
     </div>
-
-    <script>
-        $(document).ready(function () {
-            fullPage.fullPage
-
-        });
-    </script>
 </body>
-
-
-
