@@ -14,6 +14,7 @@ namespace DbConsole
         {
             using (UnitOfWork uow = new UnitOfWork()) {
                 FitController ctrl = new FitController(uow);
+                uow.PersonRepository.Insert(new Person { });
             }
         }
     }
