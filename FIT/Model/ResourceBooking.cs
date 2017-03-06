@@ -13,5 +13,7 @@ namespace Model
         public Booking Booking { get; set; }
         [Required]
         public Resource Resource { get; set; }
+        [Required]
+        public int Amount { get; set; }
     }
 }

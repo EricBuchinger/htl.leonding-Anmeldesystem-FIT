@@ -24,3 +24,6 @@ C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesyst
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.xml
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.csprojResolveAssemblyReference.cache
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DbConsole.exe.config
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.exe
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.pdb
