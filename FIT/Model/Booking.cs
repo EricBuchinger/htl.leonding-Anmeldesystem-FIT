@@ -17,8 +17,7 @@ namespace Model
         [Required]
         public Location Location { get; set; }
         public Presentation Presentation { get; set; }
-        [Required]
-        public Address Address { get; set; }
+        
         [Required]
         public Category Category { get; set; }
         [Required]
