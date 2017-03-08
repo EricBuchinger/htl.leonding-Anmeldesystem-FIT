@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Event 
+    public class Event : EntityObject
     {
-        public int Id { get; set; }
         [Required]
         public DateTime Date { get; set; }
         [Required]

@@ -52,11 +52,17 @@
     <Compile Include="Address.cs" />
     <Compile Include="Area.cs" />
     <Compile Include="Booking.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="Detail.cs" />
     <Compile Include="DetailAllocation.cs" />
+    <Compile Include="EntityObject.cs" />
     <Compile Include="Event.cs" />
+    <Compile Include="FitController.cs" />
+    <Compile Include="IEntityObject.cs" />
+    <Compile Include="IGenericRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Lecturer.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Person.cs" />

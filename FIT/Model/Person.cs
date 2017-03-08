@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Person
+    public class Person : EntityObject
     {
-        public int Id { get; set; }
         [Required]
         [MaxLength(25)]
         public string FisrtName { get; set; }
