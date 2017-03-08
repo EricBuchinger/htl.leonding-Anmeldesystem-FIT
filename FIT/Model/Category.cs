@@ -11,11 +11,11 @@ namespace Model
     public class Category: EntityObject
     {
         [Required]
-        string Name { get; set; }
+        public string Name { get; set; }
         [Required]
-        double Price { get; set; }
+        public double Price { get; set; }
         [Required]
-        string Description { get; set; }
+        public string Description { get; set; }
 
     }
 }

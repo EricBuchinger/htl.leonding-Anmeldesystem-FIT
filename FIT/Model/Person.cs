@@ -13,7 +13,7 @@ namespace Model
     {
         [Required]
         [MaxLength(25)]
-        public string FisrtName { get; set; }
+        public string FirstName { get; set; }
         [Required]
         [MaxLength(25)]
         public string LastName { get; set; }
