@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Core.Objects.DataClasses;
 using System.Linq;
 using System.Text;
@@ -14,8 +15,10 @@ namespace Model
         public string Designation { get; set; }
         [Required]
         public byte[] Graphic { get; set; }
-        [Required]
+        [ForeignKey("FK_Event")]
         public Event Event { get; set; }
+
+        public int FK_Event { get; set; }
 
     }
 }

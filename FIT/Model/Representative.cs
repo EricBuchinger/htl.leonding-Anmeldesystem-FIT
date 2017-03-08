@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Core.Objects.DataClasses;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,9 @@ namespace Model
 {
     public class Representative : Person
     {
-        [Required]
+        [ForeignKey("FK_Booking")]
         public Booking Booking { get; set; }
+
+        public int FK_Booking { get; set; }
     }
 }

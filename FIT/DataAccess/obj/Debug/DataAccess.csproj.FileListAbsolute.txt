@@ -22,3 +22,15 @@ C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesyst
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\bin\Debug\Model.dll
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\bin\Debug\Model.pdb
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\obj\Debug\DataAccess.pdb

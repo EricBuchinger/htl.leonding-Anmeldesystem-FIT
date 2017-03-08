@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Core.Objects.DataClasses;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,9 @@ namespace Model
     {
         [Required]
         public int Number { get; set; }
-        [Required]
+        [ForeignKey("FK_Area")]
         public Area Area { get; set; }
+        public int FK_Area { get; set; }
         [Required]
         public double XCoordinate { get; set; }
         [Required]
