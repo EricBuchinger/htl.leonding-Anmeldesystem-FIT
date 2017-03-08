@@ -40,15 +40,14 @@ namespace DataAccess
 
 
 
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
 
-        //    modelBuilder.Entity<Course>()
-        //        .HasMany(c => c.Instructors).WithMany(i => i.Courses)
-        //        .Map(t => t.MapLeftKey("CourseID")
-        //            .MapRightKey("PersonID")
-        //            .ToTable("CourseInstructor"));
-        //}
+            modelBuilder.Entity<Representative>().HasRequired(p => p.Person).WithMany().WillCascadeOnDelete(false);
+            modelBuilder.Entity<Lecturer>().HasRequired(p => p.Person).WithMany().WillCascadeOnDelete(false);
+            modelBuilder.Entity<Contact>().HasRequired(p => p.Person).WithMany().WillCascadeOnDelete(false);
+            modelBuilder.Entity<Location>().HasRequired(p => p.Area).WithMany().WillCascadeOnDelete(false);
+
+        }
     }
 }
