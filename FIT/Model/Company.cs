@@ -18,9 +18,9 @@ namespace Model
         [Required]
         [MaxLength(350)]
         public string ShortDescription { get; set; }
-        [ForeignKey("FK_Adress")]
+        [ForeignKey("FK_Address")]
         public Address Address { get; set; }
-        public int FK_Adress { get; set; }
+        public int FK_Address { get; set; }
 
         [ForeignKey("FK_Contact")]
         public Contact Contact { get; set; }

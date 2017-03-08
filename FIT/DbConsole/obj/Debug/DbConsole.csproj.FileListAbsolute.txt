@@ -38,3 +38,6 @@ C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbCons
 C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.xml
 C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.csprojResolveAssemblyReference.cache
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DbConsole.exe.config
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.exe
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.pdb

@@ -13,7 +13,7 @@ namespace Model
         [Required]
         public DateTime Date { get; set; }
         [Required]
-        public DateTime RegistartionStart { get; set; }
+        public DateTime RegistrationStart { get; set; }
         [Required]
         public DateTime RegistrationEnd { get; set; }
         [Required]

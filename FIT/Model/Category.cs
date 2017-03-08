@@ -15,7 +15,7 @@ namespace Model
         [Required]
         double Price { get; set; }
         [Required]
-        string Descripton { get; set; }
+        string Description { get; set; }
 
     }
 }

@@ -14,7 +14,7 @@ namespace Model
         public string RoomNumber { get; set; }
         [Required]
         [MaxLength(30)]
-        public string Titel { get; set; }
+        public string Title { get; set; }
         [Required]
         [MaxLength(400)]
         public string Description { get; set; }
