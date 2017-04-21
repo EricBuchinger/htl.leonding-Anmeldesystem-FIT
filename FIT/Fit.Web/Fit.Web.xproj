@@ -6,18 +6,18 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>647ef711-3120-44ef-b0df-10d1a3788c0e</ProjectGuid>
-    <RootNamespace>Fit.Web</RootNamespace>
+    <ProjectGuid>6f2acc48-e14a-4afa-a1d3-2fddfb8133d2</ProjectGuid>
+    <RootNamespace>FIT.Web</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <ItemGroup>
-    <DnxInvisibleContent Include="bower.json" />
-    <DnxInvisibleContent Include=".bowerrc" />
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\Model\Model.csproj" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet.Web\Microsoft.DotNet.Web.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

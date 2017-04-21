@@ -41,3 +41,5 @@ C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbCons
 C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DbConsole.exe.config
 C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.exe
 C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.pdb
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.SqlServer.xml
