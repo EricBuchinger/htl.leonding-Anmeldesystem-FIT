@@ -38,7 +38,7 @@ namespace FIT.Web
         {
             // Add framework services.
             services.AddScoped<IUnitOfWork, UnitOfWork>(serviceProvider => new UnitOfWork(Configuration.GetConnectionString("Defaultconnection")));
-
+            services.AddCors();
             services.AddApplicationInsightsTelemetry(Configuration);
             services.AddMvc();
         }
@@ -52,7 +52,7 @@ namespace FIT.Web
             app.UseApplicationInsightsRequestTelemetry();
 
             app.UseApplicationInsightsExceptionTelemetry();
-
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseMvc();
         }
     }

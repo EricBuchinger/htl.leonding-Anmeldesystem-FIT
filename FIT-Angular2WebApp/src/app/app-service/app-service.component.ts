@@ -1,5 +1,8 @@
 import {Component, Injectable} from '@angular/core';
 import {Http, Response} from "@angular/http";
+import {Company} from './models/company.model';
+import {Observable} from "rxjs";
+
 
 @Component({
   selector: 'app-app-service',
@@ -14,7 +17,9 @@ export class AppServiceComponent  {
   }
 
   getAllRegistrations(){
-     return this.http.get(this.API_URL+"companies").map((response: Response)=>response.json() as Company[]);
+     return this.http.get(this.API_URL+"companies")
+       .map((response: Response)=>response.json() as Company[])
+       .catch(err=>{console.log(err);return Observable.of<Company[]>([])});
 
     }
 
