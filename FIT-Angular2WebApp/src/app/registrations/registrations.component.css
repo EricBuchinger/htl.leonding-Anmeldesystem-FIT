@@ -1,0 +1,12 @@
+DIV.overhead{
+  background-color: lightgray;
+  margin: 3px;
+  height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+td{
+  text-align: center;
+  height: 25px;
+}

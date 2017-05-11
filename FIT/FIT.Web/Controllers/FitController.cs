@@ -23,7 +23,14 @@ namespace FIT.Web.Controllers
         public IActionResult getAllRegistrations()
         {
           
-           return Ok(iuow.BookingRepository.Get(orderBy: o => o.OrderBy(od => od.Company.Name)).ToList());
+           return Ok(iuow.BookingRepository.Get(orderBy: o => o.OrderBy(od => od.Company.Name),includeProperties:"Event,Company.Contact.Person,Company.Address,Location.Area.Event,Presentation,Category").ToList());
+        }
+
+        [Route("test")]
+        [HttpGet]
+        public IActionResult getTest()
+        {
+            return Ok(iuow.ContactRepository.Get().ToList());
         }
 
         [HttpGet("updateBookingStatusAccept/{id}")]

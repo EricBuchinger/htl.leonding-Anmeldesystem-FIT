@@ -1,9 +1,62 @@
 <h1>Anmeldungen</h1>
 
-<table>
-  <tr *ngFor="let company of companies">
+<table class="table">
+  <tr>
     <td>
-      {{company.test}}
+      <div class="overhead" [style.width]="'50px'">Id</div>
     </td>
+    <td>
+      <div class="overhead" [style.width]="'120px'">Aktionen</div>
+    </td>
+    <td>
+      <div class="overhead" [style.width]="'200px'">Firmenname</div>
+    </td>
+    <td>
+      <div class="overhead" [style.width]="'200px'">Anmeldezeitpunkt</div>
+    </td>
+    <td>
+      <div class="overhead" [style.width]="'100px'">Standplatz</div>
+    </td>
+    <td>
+      <div class="overhead" [style.width]="'300px'">Kontakt-Email</div>
+    </td>
+    <td>
+      <div class="overhead" [style.width]="'100px'">Abs-Club</div>
+    </td>
+    <td>
+      <div class="overhead" [style.width]="'100px'">Buchung</div>
+    </td>
+    <td>
+      <div class="overhead" [style.width]="'100px'">Status</div>
+    </td>
+
+  </tr>
+  <tr *ngFor="let booking of bookings">
+    <td>
+      {{booking.id}}
+    </td>
+    <td>empty</td>
+    <td>
+      {{booking.company.name}}
+    </td>
+    <td>
+      empty
+    </td>
+    <td>
+      {{booking.location.number}}
+    </td>
+    <td>
+      {{booking.company.contact.person.email}}
+    </td>
+    <td>
+      empty
+    </td>
+    <td>
+      empty
+    </td>
+    <td>
+      empty
+    </td>
+
   </tr>
 </table>

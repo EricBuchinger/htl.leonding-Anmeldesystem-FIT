@@ -5,20 +5,19 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './root/app.component';
 import { RegistrationsComponent } from './registrations/registrations.component';
-import { AppServiceComponent } from './data-service/all_bookings/all_booking-service.component';
+import {BookingHttpService} from "./data-service/all_bookings/all_booking-service.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationsComponent,
-    AppServiceComponent,
+    RegistrationsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [BookingHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

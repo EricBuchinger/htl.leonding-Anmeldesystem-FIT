@@ -1,25 +1,18 @@
-import {Component, Injectable} from '@angular/core';
-import {Http, Response} from "@angular/http";
-import {Company} from '../../models/company.model';
+import {Injectable} from '@angular/core';
+import {Http, Headers, Response} from "@angular/http";
 import {Observable} from "rxjs";
-
-
-@Component({
-  selector: 'app-app-service',
-  template:''
-})
+import {Booking} from "../../models/booking.model";
 
 @Injectable()
-export class AppServiceComponent  {
-  API_URL: string = "http://localhost:1738/fit/api/";
-  constructor (private http: Http) {
+export class BookingHttpService{
+  API_URL: string = "http://localhost:5000/api/fit/";
 
+  constructor (private http: Http) { }
+
+  getAllRegistrations() :Observable<Booking[]>{
+    return this.http.get(this.API_URL+"getallbooking") .map((response:Response)=>response.json() as Booking[])
+      .catch(err=>{console.log(err);
+      return Observable.of<Booking[]>([])});
   }
-
-  getAllRegistrations(){
-     return this.http.get(this.API_URL+"getAllBooking")
-       .map((response: Response)=>response.json() as Company[])
-       .catch(err=>{console.log(err);return Observable.of<Company[]>([])});
-    }
 
 }
