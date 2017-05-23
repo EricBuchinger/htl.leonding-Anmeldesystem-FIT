@@ -20,21 +20,15 @@ namespace FIT.Web.Controllers
 
         [Route("getAllBooking")]
         [HttpGet]
-        public IActionResult getAllRegistrations()
+        public IActionResult GetAllRegistrations()
         {
           
            return Ok(iuow.BookingRepository.Get(orderBy: o => o.OrderBy(od => od.Company.Name),includeProperties:"Event,Company.Contact.Person,Company.Address,Location.Area.Event,Presentation,Category").ToList());
         }
 
-        [Route("test")]
-        [HttpGet]
-        public IActionResult getTest()
-        {
-            return Ok(iuow.ContactRepository.Get().ToList());
-        }
 
         [HttpGet("updateBookingStatusAccept/{id}")]
-        public IActionResult updateBookingStatusAccept(int id)
+        public IActionResult UpdateBookingStatusAccept(int id)
         {
 
             Booking updater = iuow.BookingRepository.GetById(id);
@@ -46,7 +40,7 @@ namespace FIT.Web.Controllers
         }
 
         [HttpGet("updateBookingStatusDeclined/{id}")]
-        public IActionResult updateBookingStatusDeclined(int id)
+        public IActionResult UpdateBookingStatusDeclined(int id)
         {
 
             Booking updater = iuow.BookingRepository.GetById(id);
@@ -56,9 +50,16 @@ namespace FIT.Web.Controllers
             return Ok();
 
         }
+        [HttpDelete("booking/{id}")]
+        public IActionResult DeleteBooking(int id)
+        {
+            iuow.BookingRepository.Delete(id);
+            iuow.Save();
+            return Ok();
+        }
 
         [HttpPost("createNewBooking")]
-        public IActionResult createNewBooking([FromBody] string jsonString)
+        public IActionResult CreateNewBooking([FromBody] string jsonString)
         {
             JObject json = JObject.Parse(jsonString);
 

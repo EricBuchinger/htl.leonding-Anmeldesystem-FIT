@@ -1,12 +1,17 @@
 DIV.overhead{
   background-color: lightgray;
-  margin: 3px;
+  margin: 2px;
   height: 25px;
   text-align: center;
-  vertical-align: middle;
-  display: table-cell;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 td{
   text-align: center;
-  height: 25px;
+  height: 35px;
+}
+TABLE.myTable{
+  margin: 10px;
 }

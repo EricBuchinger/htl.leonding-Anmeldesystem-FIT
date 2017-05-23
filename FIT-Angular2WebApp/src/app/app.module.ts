@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './root/app.component';
 import { RegistrationsComponent } from './registrations/registrations.component';
 import {BookingHttpService} from "./data-service/all_bookings/all_booking-service.component";
+import {AlertModule} from 'ng2-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {BookingHttpService} from "./data-service/all_bookings/all_booking-servic
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AlertModule.forRoot()
   ],
   providers: [BookingHttpService],
   bootstrap: [AppComponent]

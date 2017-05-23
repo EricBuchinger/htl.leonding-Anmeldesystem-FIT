@@ -14,5 +14,10 @@ export class BookingHttpService{
       .catch(err=>{console.log(err);
       return Observable.of<Booking[]>([])});
   }
+  deleteBooking(bookingId:number){
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    this.http.delete(this.API_URL+"booking/"+bookingId,{headers: headers});
+  }
 
 }

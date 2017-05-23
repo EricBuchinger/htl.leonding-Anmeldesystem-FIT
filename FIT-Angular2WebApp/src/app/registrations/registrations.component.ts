@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {BookingHttpService} from "../data-service/all_bookings/all_booking-service.component";
 import {Booking} from "../models/booking.model";
 import {Contact} from "../models/contact.model";
+import {isBoolean} from "util";
 
 @Component({
   selector: 'app-registrations',
@@ -10,7 +11,6 @@ import {Contact} from "../models/contact.model";
 })
 export class RegistrationsComponent implements OnInit{
   private bookings: Booking[];
-
   constructor(private httpService : BookingHttpService){
 
   }
@@ -18,6 +18,12 @@ export class RegistrationsComponent implements OnInit{
   ngOnInit(){
    this.httpService.getAllRegistrations().subscribe(res => this.bookings = res);
   }
+
+  deleteBooking(bookingId:number){
+      //alert("Wirklich löschen?");
+      this.httpService.deleteBooking(bookingId);
+    }
+
 
 
 

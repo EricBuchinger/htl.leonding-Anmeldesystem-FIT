@@ -1,9 +1,20 @@
-<h1>Anmeldungen</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
 
-<table class="table">
+
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="#">Aktionen</a></li>
+  <li role="presentation"><a href="#">Firmenname</a></li>
+</ul>
+
+<table>
   <tr>
     <td>
-      <div class="overhead" [style.width]="'50px'">Id</div>
+      <div class="overhead" [style.width]="'50px'" >#</div>
     </td>
     <td>
       <div class="overhead" [style.width]="'120px'">Aktionen</div>
@@ -35,12 +46,15 @@
     <td>
       {{booking.id}}
     </td>
-    <td>empty</td>
+    <td >
+      <img src="../../assets/edit.ico" class="btn-default" height="20px" width="20px"/>
+      <img src="../../assets/delete.png" class="btn-default" height="20px" width="20px" (click)="deleteBooking(booking.id)"/>
+      <img src="../../assets/pdf.png" class="btn-default" height="20px" width="20px"/>
+    </td>
     <td>
       {{booking.company.name}}
     </td>
     <td>
-      empty
     </td>
     <td>
       {{booking.location.number}}
@@ -55,8 +69,11 @@
       empty
     </td>
     <td>
-      empty
+      <div *ngIf="booking.isAccepted == true">
+        <img src="../../assets/isAccepted.png" height="15px" width="15px"/>
+      </div>
     </td>
-
   </tr>
 </table>
+</body>
+</html>
