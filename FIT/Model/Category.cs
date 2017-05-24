@@ -17,5 +17,7 @@ namespace Model
         [Required]
         public string Description { get; set; }
 
+        public Location Location { get; set; }
+
     }
 }

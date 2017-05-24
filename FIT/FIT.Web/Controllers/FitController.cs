@@ -26,11 +26,16 @@ namespace FIT.Web.Controllers
            return Ok(iuow.BookingRepository.Get(orderBy: o => o.OrderBy(od => od.Company.Name),includeProperties:"Event,Company.Contact.Person,Company.Address,Location.Area.Event,Presentation,Category").ToList());
         }
 
-        [Route("getAreaWithLocation")]
+        [Route("getAreas")]
         [HttpGet]
         public IActionResult GetAreas(string designation="1.Stock")
         {
-           return Ok(iuow.LocationRepository.Get(includeProperties: "Area.Event", filter: l => l.Area.Designation == designation) .ToList());
+           return Ok(iuow.LocationRepository.Get(includeProperties: "Area.Event") .ToList());
+        }
+
+        public IActionResult GetCategories()
+        {
+            return Ok(iuow.CategoryRepository.Get(includeProperties: "Location"));
         }
 
 
