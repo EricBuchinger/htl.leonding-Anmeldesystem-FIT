@@ -26,8 +26,15 @@ namespace FIT.Web.Controllers
            return Ok(iuow.BookingRepository.Get(orderBy: o => o.OrderBy(od => od.Company.Name),includeProperties:"Event,Company.Contact.Person,Company.Address,Location.Area.Event,Presentation,Category").ToList());
         }
 
+        [Route("getAreaWithLocation")]
+        [HttpGet]
+        public IActionResult GetAreas(string designation="1.Stock")
+        {
+           return Ok(iuow.LocationRepository.Get(includeProperties: "Area.Event", filter: l => l.Area.Designation == designation) .ToList());
+        }
 
-        [HttpGet("updateBookingStatusAccept/{id}")]
+
+        /*[("updateBookingStatusAccept/{id}")]
         public IActionResult UpdateBookingStatusAccept(int id)
         {
 
@@ -39,7 +46,7 @@ namespace FIT.Web.Controllers
 
         }
 
-        [HttpGet("updateBookingStatusDeclined/{id}")]
+        [HttpPost("updateBookingStatusDeclined/{id}")]
         public IActionResult UpdateBookingStatusDeclined(int id)
         {
 
@@ -49,7 +56,7 @@ namespace FIT.Web.Controllers
             iuow.Save();
             return Ok();
 
-        }
+        }*/
         [HttpDelete("booking/{id}")]
         public IActionResult DeleteBooking(int id)
         {
@@ -58,7 +65,7 @@ namespace FIT.Web.Controllers
             return Ok();
         }
 
-        [HttpPost("createNewBooking")]
+        /*[HttpPost("createNewBooking")]
         public IActionResult CreateNewBooking([FromBody] string jsonString)
         {
             JObject json = JObject.Parse(jsonString);
@@ -161,7 +168,7 @@ namespace FIT.Web.Controllers
 
 
             return Ok();
-        }
+        }*/
         
     }
 }
