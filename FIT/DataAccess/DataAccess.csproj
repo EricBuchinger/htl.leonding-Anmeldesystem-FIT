@@ -59,6 +59,10 @@
     <Compile Include="Migrations\201705241339060_LocationAddedInCategory.Designer.cs">
       <DependentUpon>201705241339060_LocationAddedInCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705241401371_ForeignKeyAddedCategory.cs" />
+    <Compile Include="Migrations\201705241401371_ForeignKeyAddedCategory.Designer.cs">
+      <DependentUpon>201705241401371_ForeignKeyAddedCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitOfWork.cs" />
@@ -79,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705241339060_LocationAddedInCategory.resx">
       <DependentUpon>201705241339060_LocationAddedInCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705241401371_ForeignKeyAddedCategory.resx">
+      <DependentUpon>201705241401371_ForeignKeyAddedCategory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

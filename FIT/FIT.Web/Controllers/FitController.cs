@@ -30,9 +30,11 @@ namespace FIT.Web.Controllers
         [HttpGet]
         public IActionResult GetAreas(string designation="1.Stock")
         {
-           return Ok(iuow.LocationRepository.Get(includeProperties: "Area.Event") .ToList());
+           return Ok(iuow.AreaRepository.Get(includeProperties: "Event") .ToList());
         }
 
+        [Route("getCategories")]
+        [HttpGet]
         public IActionResult GetCategories()
         {
             return Ok(iuow.CategoryRepository.Get(includeProperties: "Location"));

@@ -37,3 +37,5 @@ C:\Users\Marcel Pautz\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DataAc
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\bin\Debug\Model.dll.config
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\obj\Debug\DataAccess.Migrations.InitialCreate.resources
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\obj\Debug\DataAccess.csproj.GenerateResource.Cache
+C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\obj\Debug\DataAccess.Migrations.LocationAddedInCategory.resources
+C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DataAccess\obj\Debug\DataAccess.Migrations.ForeignKeyAddedCategory.resources
