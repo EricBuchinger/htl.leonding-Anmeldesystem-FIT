@@ -7,6 +7,6 @@ Bei dem jährlich stattfindenden FIT der HTL Leonding nehmen traditionell sehr v
 <h2 align="center"> Anforderungen </h2>
 FitLog soll eine moderne Plattform schaffen auf welcher sich alle Firmen für den FIT der HTL Leonding anmelden können. Der FitLog stellt des weiteren für die Funktionäre der Schule alle Anmeldungen zur Einsicht zur Verfügung. Der Admin kann den FIT mittels eines eigenen Adminbereichs der im FitLog enthalten ist sämtliche Attribute vom FIT oder der Firmen konfigurieren zu können. Mittels einer neuen verbesserten Oberfläche zur Standauswahl und einem zeitgerechten Design soll dem Benutzer ein Innovatives Gefühl vermittelt werden.
 
-![alt text]()
+![alt text](https://github.com/EricBuchinger/htl.leonding-Anmeldesystem-FIT/blob/master/Documents/usecase.png?raw=true)
 
 
