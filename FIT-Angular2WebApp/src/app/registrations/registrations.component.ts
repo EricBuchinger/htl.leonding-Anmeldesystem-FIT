@@ -16,13 +16,17 @@ export class RegistrationsComponent implements OnInit{
   }
 
   ngOnInit(){
-   this.httpService.getAllRegistrations().subscribe(res => this.bookings = res);
+   this.getBookings();
   }
 
   deleteBooking(bookingId:number){
-      //alert("Wirklich löschen?");
-      this.httpService.deleteBooking(bookingId);
+      alert("Wirklich löschen?");
+      this.httpService.deleteBooking(bookingId).subscribe(() => this.getBookings());
     }
+
+  getBookings(){
+    this.httpService.getAllRegistrations().subscribe(res => this.bookings = res);
+  }
 
 
 

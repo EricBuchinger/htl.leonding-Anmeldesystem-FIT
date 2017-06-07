@@ -17,7 +17,7 @@ export class BookingHttpService{
   deleteBooking(bookingId:number){
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    this.http.delete(this.API_URL+"booking/"+bookingId,{headers: headers});
+    return this.http.delete(this.API_URL+"booking/"+bookingId,{headers: headers});
   }
 
 }

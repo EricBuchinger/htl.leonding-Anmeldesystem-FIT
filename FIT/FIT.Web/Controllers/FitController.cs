@@ -22,8 +22,11 @@ namespace FIT.Web.Controllers
         [HttpGet]
         public IActionResult GetAllRegistrations()
         {
-          
-           return Ok(iuow.BookingRepository.Get(orderBy: o => o.OrderBy(od => od.Company.Name),includeProperties:"Event,Company.Contact.Person,Company.Address,Location.Area.Event,Presentation,Category").ToList());
+            List<Booking> bookings =
+                iuow.BookingRepository.Get(orderBy: o => o.OrderBy(od => od.Company.Name),
+                        includeProperties: "Event,Company.Contact.Person,Company.Address,Location.Area.Event,Presentation")
+                    .ToList();
+            return Ok(bookings);
         }
 
         [Route("getAreas")]
@@ -64,7 +67,9 @@ namespace FIT.Web.Controllers
             return Ok();
 
         }*/
-        [HttpDelete("booking/{id}")]
+        
+        [Route("booking/{id}")]
+        [HttpDelete]
         public IActionResult DeleteBooking(int id)
         {
             iuow.BookingRepository.Delete(id);

@@ -83,9 +83,20 @@ insert into dbo.Locations(Number,FK_Area,XCoordinate,YCoordinate)
 	from dbo.Areas a, dbo.Events e
 	where a.Designation = '2.Stock' and e.Date=27-11-2017;
 
-insert into dbo.Categories(name,price,Description) values('basic',200,'Nur einen Stand');
-insert into dbo.Categories(name,price,Description) values('sponsor',400,'Stand + Vortrag');
-insert into dbo.Categories(name,price,Description) values('premium sponsor',600,'Stand + Vortrag + Sponsoreitrag');
+insert into dbo.Categories(name,price,Description,Fk_Location)
+select 'basic',200,'Nur einen Stand', l.Id
+from dbo.Locations l
+where l.Number = 101;
+
+insert into dbo.Categories(name,price,Description,Fk_Location) 
+select 'sponsor',400,'Stand + Vortrag', l.id
+from dbo.Locations l
+where l.Number = 10;
+
+insert into dbo.Categories(name,price,Description,Fk_Location) 
+select 'premium sponsor',600,'Stand + Vortrag + Sponsoreitrag',l.id
+from dbo.Locations l
+where l.Number = 15;
 
 insert into dbo.Presentations(RoomNumber,Title,Description,IsAccepted) values(101,'C#','Was ist C?#','false');
 insert into dbo.Presentations(RoomNumber,Title,Description,IsAccepted) values(102,'Java','Was ist Java?','false');
