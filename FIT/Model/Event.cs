@@ -10,13 +10,13 @@ namespace Model
 {
     public class Event : EntityObject
     {
-        [Required]
-        public DateTime Date { get; set; }
-        [Required]
-        public DateTime RegistrationStart { get; set; }
-        [Required]
-        public DateTime RegistrationEnd { get; set; }
-        [Required]
+        
+        public String Date { get; set; }
+        
+        public String RegistrationStart { get; set; }
+        
+        public String RegistrationEnd { get; set; }
+        
         public bool IsLocked { get; set; }
 
     }

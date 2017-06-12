@@ -31,9 +31,9 @@ namespace FIT.Web.Controllers
 
         [Route("getAreas")]
         [HttpGet]
-        public IActionResult GetAreas(string designation="1.Stock")
+        public IActionResult GetAreas(string designation = "1.Stock")
         {
-           return Ok(iuow.AreaRepository.Get(includeProperties: "Event") .ToList());
+            return Ok(iuow.AreaRepository.Get(includeProperties: "Event").ToList());
         }
 
         [Route("getCategories")]
@@ -47,27 +47,22 @@ namespace FIT.Web.Controllers
         /*[("updateBookingStatusAccept/{id}")]
         public IActionResult UpdateBookingStatusAccept(int id)
         {
-
             Booking updater = iuow.BookingRepository.GetById(id);
             updater.isAccepted = true;
             iuow.BookingRepository.Update(updater);
             iuow.Save();
             return Ok();
-
         }
-
         [HttpPost("updateBookingStatusDeclined/{id}")]
         public IActionResult UpdateBookingStatusDeclined(int id)
         {
-
             Booking updater = iuow.BookingRepository.GetById(id);
             updater.isAccepted = false;
             iuow.BookingRepository.Update(updater);
             iuow.Save();
             return Ok();
-
         }*/
-        
+
         [Route("booking/{id}")]
         [HttpDelete]
         public IActionResult DeleteBooking(int id)
@@ -81,7 +76,6 @@ namespace FIT.Web.Controllers
         public IActionResult CreateNewBooking([FromBody] string jsonString)
         {
             JObject json = JObject.Parse(jsonString);
-
             Booking newBooking = new Booking();
             Company newComp = new Company();
             Address newAddress = new Address();
@@ -101,20 +95,16 @@ namespace FIT.Web.Controllers
             DetailAllocation valueLocInt = new DetailAllocation();
             Detail locationsAustria = new Detail();
             Detail internatLocations = new Detail();
-
             DetailAllocation valueHolidayWorkAndDiplomaThesis = new DetailAllocation();
             DetailAllocation valueTechnicalDevision = new DetailAllocation();
             Detail holidayWorkAndDiplomaThesis = new Detail();
             Detail technicalDevision = new Detail();
-
             Person representer1 = new Person();
             Person contact1 = new Person();
-
             Contact contactPerson = new Contact();
             Representative representer = new Representative();
             Presentation newPres = null;
             
-
             newComp.Name = json.GetValue("CompanyName").ToString();
             newAddress.Street = json.GetValue("Street").ToString();
             newAddress.Number = json.GetValue("StreetNumber").ToString();
@@ -153,14 +143,12 @@ namespace FIT.Web.Controllers
             // email and phonenumber can be applied to representers if wanted and multiple representers can be added if wanted
             // representer1.Email = json.GetValue("Representer1PersonEmail").ToString();
             // representer1.PhoneNumber = json.GetValue("Representer1PersonPhoneNumber").ToString();
-
             newBooking.Category = newCategory;
             newBooking.Company = newComp;
             newBooking.Event = FIT;
             newBooking.isAccepted = false;
             newBooking.Location = null;
             newBooking.Presentation = newPres;
-
             iuow.AdressRepository.Insert(newAddress);
             iuow.BookingRepository.Insert(newBooking);
             iuow.CategoryRepository.Insert(newCategory);
@@ -176,11 +164,15 @@ namespace FIT.Web.Controllers
             iuow.PresentationRepository.Insert(newPres);
             iuow.RepresentativeRepository.Insert(representer);
             iuow.Save();
-
-
-
             return Ok();
         }*/
-        
+
+        [HttpPost("createNewBooking")]
+        public IActionResult CreateNewBooking([FromBody]Booking booking)
+        {
+            iuow.BookingRepository.Insert(booking);
+            iuow.Save();
+            return Ok();
+        }
     }
 }

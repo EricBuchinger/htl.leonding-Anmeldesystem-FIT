@@ -11,28 +11,23 @@ namespace Model
 {
     public class Booking : EntityObject
     {
-        [ForeignKey("FK_Event")]
         public Event Event { get; set; }
 
-        public int FK_Event { get; set; }
 
-        [ForeignKey("FK_Company")]
         public Company Company { get; set; }
 
-        public int FK_Company { get; set; }
-        [ForeignKey("FK_Location")]
         public Location Location { get; set; }
-        public int FK_Location { get; set; }
+        
 
-        [ForeignKey("FK_Presentation")]
+       
         public Presentation Presentation { get; set; }
 
-        public int FK_Presentation { get; set; }
+        
 
-        [ForeignKey("FK_Category")]
+
         public Category Category { get; set; }
-        public int FK_Category { get; set; }
-        [Required]
+        
+        
         public bool isAccepted { get; set; }
 
     }

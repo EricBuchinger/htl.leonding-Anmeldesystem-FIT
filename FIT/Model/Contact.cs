@@ -11,8 +11,7 @@ namespace Model
 {
     public class Contact :EntityObject 
     {
-        [ForeignKey("FK_Person")]
         public Person Person { get; set; }
-        public int FK_Person { get; set; }
+        
     }
 }

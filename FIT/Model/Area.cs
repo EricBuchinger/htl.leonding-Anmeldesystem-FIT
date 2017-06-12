@@ -11,14 +11,12 @@ namespace Model
 {
     public class Area :EntityObject
     {
-        [Required]
+        
         public string Designation { get; set; }
-        [Required]
+        
         public byte[] Graphic { get; set; }
-        [ForeignKey("FK_Event")]
         public Event Event { get; set; }
 
-        public int FK_Event { get; set; }
 
     }
 }

@@ -11,19 +11,17 @@ namespace Model
 {
     public class Person : EntityObject
     {
-        [Required]
+        
         [MaxLength(25)]
         public string FirstName { get; set; }
-        [Required]
+        
         [MaxLength(25)]
         public string LastName { get; set; }
-        [Required]
-        [CustomValidation(typeof(EmailValidation),"EmailRules")]
+        
         public string Email { get; set; }
-        [Required]
+       
         public byte[] Picture { get; set; }
-        [Required]
-        [Phone]
+        
         public string PhoneNumber { get; set;}
     }
 }

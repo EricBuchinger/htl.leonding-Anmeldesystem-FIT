@@ -1,0 +1,357 @@
+<md-sidenav-container fullscreen flex class="blue-orange">
+  <md-toolbar color="primary">
+    <span>Firmeninformationstag</span>
+  </md-toolbar>
+  <br>
+
+  <md-tab-group [dynamicHeight]="true">
+    <md-tab label="Allgemeines zur Firma">
+
+      <div class="input-div">
+          <h1>Allgemeines zur Firma</h1>
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <md-input-container class="example-full-width" #nameOfCompany>
+                  <input mdInput placeholder="Name der Firma" [(ngModel)]="newBooking.company.name">
+                </md-input-container>
+              </td>
+            </tr>
+          </table>
+          <p>
+            <md-input-container style="width: 75%" #streetOfCompany>
+              <input mdInput placeholder="Straße"  [(ngModel)]="newBooking.company.adress.street">
+            </md-input-container>
+            <md-input-container style="width: 24%">
+              <input mdInput placeholder="Hausnummer" [(ngModel)]="newBooking.company.adress.number">
+            </md-input-container>
+          </p>
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <md-input-container class="example-full-width" #plzOfCompany>
+                  <input mdInput placeholder="Postleitzahl" [(ngModel)]="newBooking.company.adress.postalCode">
+                </md-input-container>
+              </td>
+              <td>
+                <md-input-container class="example-full-width" #placeOfCompany>
+                  <input mdInput placeholder="Ort" [(ngModel)]="newBooking.company.adress.city">
+                </md-input-container>
+              </td>
+            </tr>
+          </table>
+          <p>
+            <md-input-container class="example-full-width" #phoneNumberOfCompany>
+              <input mdInput placeholder="Telefonnummer" [(ngModel)]="newBooking.company.phoneNumber">
+            </md-input-container>
+          </p>
+          <p>
+            <md-input-container class="example-full-width" #emailOfCompany>
+              <input mdInput placeholder="Email"  [(ngModel)]="newBooking.company.email">
+            </md-input-container>
+          </p>
+          <p>
+            <md-input-container class="example-full-width" #homepageOfCompany>
+              <input mdInput placeholder="Homepage" [(ngModel)]="newBooking.company.homepage">
+            </md-input-container>
+          </p>
+          <h5>FileUpload</h5>
+          <button md-raised-button
+                  class="create-button" color="primary">Weiter
+          </button>
+        </div>
+    </md-tab>
+
+    <md-tab label="Details zur Firma" >
+
+      <div class="input-div">
+        <h1>Details zur Firma</h1>
+        <h4>Diese detailierten Angaben zu ihrer Firma helfen unseren Besuchern, die passenden Firmen zu Finden. Bitte seien Sie bei den gesuchten Berufen so spezifisch wie möglich.</h4>
+        <p>
+          <md-input-container class="example-full-width" #companyBranche>
+            <input mdInput placeholder="Branche"
+                      name="shortDescUpdate"
+                      [(ngModel)]="newBooking.company.subjectAreas">
+          </md-input-container>
+        </p>
+        <p>
+          <md-input-container class="example-full-width" #companyShortDesc>
+            <textarea mdInput class="expandedTextArea" placeholder="Kurzbeschreibung des Tätigkeitsfelds" name="addressUpdate"  [(ngModel)]="newBooking.company.shortDescription"></textarea>
+          </md-input-container>
+        </p>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <md-input-container class="example-full-width" #locationsNationalCount>
+                <input mdInput placeholder="Anzahl Standorte Österreich"  name="companyLocationsNationalCount">
+              </md-input-container>
+            </td>
+            <td>
+              <md-input-container class="example-full-width" #locationsNational>
+                <input mdInput placeholder="Standortnamen Österreich"  name="companyLocationsNational">
+              </md-input-container>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <md-input-container class="example-full-width" #locationsInternationalCount>
+                <input mdInput placeholder="Anzahl Standorte International"  name="companyLocationsInternationalCount">
+              </md-input-container>
+            </td>
+            <td>
+              <md-input-container class="example-full-width" #locationsInternational>
+                <input mdInput placeholder="Standortnamen International"  name="companyLocationsInternational">
+              </md-input-container>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+
+          <tr>
+            <td>
+              <h3>Vergeben Sie....</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <md-checkbox class="example-radio-button" *ngFor="let tagItem of whatList;let i = index;"
+                                 [value]="tagItem" [checked]="i==0">
+                  {{tagItem}}
+                </md-checkbox>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Gesuchte Fachrichtungen</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <md-checkbox class="example-radio-button" *ngFor="let tagItem of subjectList;let i = index;"
+                                 [value]="tagItem" [checked]="i==0">
+                  {{tagItem}}
+                </md-checkbox>
+
+            </td>
+          </tr>
+          <tr>
+            <h1></h1>
+          </tr>
+          <tr>
+            <td>
+              <button md-raised-button
+                      class="create-button" color="primary">Zurück
+              </button>
+            </td>
+            <td>
+              <button md-raised-button
+                      class="create-button" color="primary">Weiter
+              </button>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+    </md-tab>
+
+    <md-tab label="Ihr Auftreten am Fit">
+      
+      <div class="input-div">
+        <h1>Ihr Auftreten am Fit</h1>
+        <h4>Diese Angaben helfen uns Ihr Auftreten am Fit so optimal wie möglich zu gestallten.</h4>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <h3>Sie benötigen....</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+
+                <md-checkbox class="example-radio-button" *ngFor="let tagItem of tagList;let i = index;"
+                                 [value]="tagItem" [checked]="i==0">
+                  {{tagItem}}
+                </md-checkbox>
+
+
+            </td>
+          </tr>
+        </table>
+        <p>
+          <md-input-container class="example-full-width" #companyNote>
+            <textarea mdInput  class="expandedTextArea"placeholder="Sonstige Anmerkungen (z.B. eigener Messestand)" name="companyNoteForApperance"></textarea>
+          </md-input-container>
+        </p>
+
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <h3>Sie wählen das....</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <md-radio-group class="example-radio-group" #tag>
+                <md-radio-button class="example-radio-button" *ngFor="let tagItem of sponsorList;let i = index;"
+                                 [value]="tagItem" [checked]="i==0">
+                  {{tagItem}}
+                </md-radio-button>
+
+              </md-radio-group>
+            </td>
+          </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <h3>Wählen Sie einen Standplatz</h3>
+            </td>
+            <td>
+              <button md-raised-button
+                      class="create-button" color="primary">Standplatz Wählen
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Sie werden vertreten durch:</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <md-input-container class="example-full-width" #nameOfWorker>
+                <input mdInput placeholder="Name des Vertreters">
+              </md-input-container>
+            </td>
+            <td>
+              <md-input-container class="example-full-width" #emailOfWorker>
+                <input mdInput placeholder="Email des Vertreters">
+              </md-input-container>
+            </td>
+            <td>
+              <button md-raised-button
+                      class="create-button" color="primary"> Choose File
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <md-input-container class="example-full-width" #nameOfWorker>
+                <input mdInput placeholder="Name des Vertreters">
+              </md-input-container>
+            </td>
+            <td>
+              <md-input-container class="example-full-width" #emailOfWorker>
+                <input mdInput placeholder="Email des Vertreters">
+              </md-input-container>
+            </td>
+            <td>
+              <button md-raised-button
+                      class="create-button" color="primary"> Choose File
+              </button>
+            </td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td>
+              <button md-raised-button
+                      class="create-button" color="primary">Zurück
+              </button>
+            </td>
+            <td>
+              <button md-raised-button
+                      class="create-button" color="primary">Weiter
+              </button>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+    </md-tab>
+
+  <md-tab label="Kontakt & Anmerkungen" >
+
+      <div class="input-div">
+        <h1>Kontakt & Anmerkungen</h1>
+        <h4>Bitte geben Sie hier die Daten der Kontaktperson an, mit der das FIT-Organisationsteam Sie für Rückfragen erreichen kann. An diese Emailadresse wird auch die Anmeldebestätigung versandt.</h4>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <h3>Kontaktperson</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <md-input-container class="example-full-width" #firstNameRep>
+                <input mdInput placeholder="Vorname des Kontakts" [(ngModel)]="newBooking.company.contact.person.firstName">
+              </md-input-container>
+            </td>
+            <td>
+              <md-input-container class="example-full-width" #lastNameRep>
+                <input mdInput placeholder="Nachname des Kontakts" [(ngModel)]="newBooking.company.contact.person.lastName">
+              </md-input-container>
+            </td>
+          </tr>
+    </table>
+        <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <md-input-container class="example-full-width" #emailOfRep>
+              <input mdInput placeholder="Email des Kontakts" [(ngModel)]="newBooking.company.contact.person.email">
+            </md-input-container>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <md-input-container class="example-full-width" #phoneOfRep>
+              <input mdInput placeholder="Telefonnummer des Kontakts" [(ngModel)]="newBooking.company.contact.person.phoneNumber">
+            </md-input-container>
+          </td>
+        </tr>
+        </table>
+
+        <p>
+          <md-input-container class="example-full-width" #companyShortDesc>
+            <textarea mdInput class="expandedTextArea" placeholder="Sonstige Anmerkungen" name="noteFinal" [(ngModel)]="newBooking.company.comment"></textarea>
+          </md-input-container>
+        </p>
+        <p>
+
+            <md-checkbox class="example-radio-button" *ngFor="let tagItem of agbList;let i = index;"
+                             [value]="tagItem" >
+              {{tagItem}}
+            </md-checkbox>
+
+
+        </p>
+
+        <table class="example-full-width" cellspacing="0">
+
+          <tr><h1></h1></tr>
+          <tr>
+            <td>
+              <button md-raised-button
+                      class="create-button" color="primary">Zurück
+              </button>
+            </td>
+            <td>
+              <button md-raised-button (click)="persistData()"
+                      class="create-button" color="primary">Angaben Speichern
+              </button>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+    </md-tab>
+  </md-tab-group>
+
+
+  <br>
+  <hr>
+</md-sidenav-container>

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+span{
+    font-family: 'Roboto', sans-serif;
+}
+
+.input-div {
+  width: 40vw;
+  height: 80vh;
+  margin: 20px auto auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.create-button{
+    margin:auto;
+}
+
+h4{
+  color: gray;
+}
+.expandedTextArea{
+  height:15vh;
+}
+md-radio-button{
+  margin-right:1.5vw;
+}
+md-checkbox{
+  margin-right: 1.5vw;
+}

@@ -11,16 +11,16 @@ namespace Model
     public class Address : EntityObject
     {
         
-        [Required]
+        
         [MaxLength(25)]
         public string City { get; set; }
-        [Required]
+        
         [MaxLength(7)]
         public string PostalCode { get; set; }
-        [Required]
+        
         [MaxLength(50)]
         public string Street { get; set; }
-        [Required]
+        
         [MaxLength(5)]
         public string  Number { get; set; }
     }

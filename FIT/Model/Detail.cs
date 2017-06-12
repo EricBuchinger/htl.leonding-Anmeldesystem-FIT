@@ -10,7 +10,7 @@ namespace Model
 {
     public class Detail : EntityObject
     {
-        [Required]
+        
         [MaxLength(30)]
         public string Description { get; set; }
 
