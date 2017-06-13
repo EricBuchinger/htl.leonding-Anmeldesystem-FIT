@@ -1,9 +1,15 @@
 
 import {EntityObject} from "./entityObject";
-export interface Person extends EntityObject{
-  firstName:string;
-  lastName:string;
-  email:string;
-  picture:string;
-  phoneNumber:string;
+export class Person extends EntityObject{
+
+
+  constructor(public id:number,
+              public timestamp:string,
+              public firstName:string,
+              public lastName:string,
+              public email:string,
+              public picture:string,
+              public phoneNumber:string){
+    super(id,timestamp);
+  }
 }

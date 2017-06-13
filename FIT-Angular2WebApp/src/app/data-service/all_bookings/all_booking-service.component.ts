@@ -19,5 +19,19 @@ export class BookingHttpService{
     headers.append('Content-Type', 'application/json');
     return this.http.delete(this.API_URL+"booking/"+bookingId,{headers: headers});
   }
+  acceptBooking(bookingId:number){
+    return this.http.get(this.API_URL+"updateBookingStatusAccept/"+bookingId);
+  }
+  getBookingById(bookingId:number){
+    return this.http.get(this.API_URL+"booking/"+bookingId).map((response:Response)=> response.json() as Booking)
+      .catch(err=>{console.log(err);
+        return Observable.of<Booking>()});
+  }
+  updateBooking(booking:Booking){
+    //return this.http.put()
+  }
+  declineBooking(bookingId:number){
+    return this.http.get(this.API_URL+"updateBookingStatusDeclined/"+bookingId);
+  }
 
 }

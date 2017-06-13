@@ -1,4 +1,8 @@
-export interface EntityObject{
-  id:number;
-  timestamp:string;
+export class EntityObject{
+
+
+  constructor(public id:number,
+              public timestamp:string){
+
+  }
 }

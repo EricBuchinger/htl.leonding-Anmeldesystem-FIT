@@ -1,0 +1,88 @@
+<head>
+
+</head>
+<body>
+<div *ngIf="booking!=null">
+    <div class="header" >
+      <h1 class="header">Firma: <span class="label label-primary">{{firmenname}}</span></h1>
+      <h1 class="header">Standplatz: <span class="label label-primary">{{standplatz}}</span></h1>
+    </div>
+
+    <hr>
+    <form class="form-horizontal">
+      <h3>Firmendaten</h3>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Firmenname</label>
+        <div class="col-xs-5">
+          <input [(value)]="booking.company.name" type="text" class="form-control" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Beschreibung</label>
+        <div class="col-xs-5">
+          <input [(value)]="booking.company.shortDescription" type="text" class="form-control" >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Email</label>
+        <div class="col-xs-5">
+          <input [(value)]="booking.company.email" type="text" class="form-control" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Homepage</label>
+        <div class="col-xs-5">
+          <input [(value)]="booking.company.homepage" type="text" class="form-control" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Telefonnummer</label>
+        <div class="col-xs-5">
+          <input [(value)]="booking.company.phoneNumber" type="text" class="form-control" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Abteilungen</label>
+        <div class="col-xs-5">
+          <input [(value)]="booking.company.subjectAreas" type="text" class="form-control" >
+        </div>
+      </div>
+      <hr>
+      <h3>Adressdaten der Firma</h3>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Straße</label>
+        <div class="col-xs-5">
+          <input [(value)]="booking.company.address.street" type="text" class="form-control" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Hausnummer</label>
+        <div class="col-xs-5">
+          <input [(value)]="booking.company.address.number" type="text" class="form-control" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Postleitzahl</label>
+        <div class="col-xs-5">
+          <input [(value)]="booking.company.address.postalCode" type="text" class="form-control" >
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Stadt</label>
+        <div class="col-xs-5">
+          <input [(value)]="booking.company.address.city" type="text" class="form-control" >
+        </div>
+      </div>
+      <hr>
+      <div class="form-group">
+        <div class="col-xs-12" align="center">
+          <button class="btn btn-info" (click)="saveBooking()">Speichern</button>
+          <button class="btn btn-danger" (click)="cancelEdit()">Abbruch</button>
+          <button class="btn btn-warning" (click)="declineBooking()">Firma ablehnen</button>
+          <button class="btn btn-success" (click)="acceptBooking()">Firma annehmen</button>
+        </div>
+      </div>
+    </form>
+</div>
+</body>

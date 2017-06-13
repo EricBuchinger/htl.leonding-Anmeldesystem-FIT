@@ -43,8 +43,8 @@ namespace FIT.Web.Controllers
             return Ok(iuow.CategoryRepository.Get(includeProperties: "Location"));
         }
 
-
-        /*[("updateBookingStatusAccept/{id}")]
+        [HttpGet]
+        [Route("updateBookingStatusAccept/{id}")]
         public IActionResult UpdateBookingStatusAccept(int id)
         {
 
@@ -56,7 +56,8 @@ namespace FIT.Web.Controllers
 
         }
 
-        [HttpPost("updateBookingStatusDeclined/{id}")]
+        [HttpGet]
+        [Route("updateBookingStatusDeclined/{id}")]
         public IActionResult UpdateBookingStatusDeclined(int id)
         {
 
@@ -66,8 +67,7 @@ namespace FIT.Web.Controllers
             iuow.Save();
             return Ok();
 
-        }*/
-        
+        }
         [Route("booking/{id}")]
         [HttpDelete]
         public IActionResult DeleteBooking(int id)
@@ -75,6 +75,15 @@ namespace FIT.Web.Controllers
             iuow.BookingRepository.Delete(id);
             iuow.Save();
             return Ok();
+        }
+
+        [Route("booking/{id}")]
+        [HttpGet]
+        public IActionResult GetBookingById(int id)
+        {
+            return Ok(this.iuow.BookingRepository.Get(includeProperties: "Event,Company.Contact.Person,Company.Address,Location.Area.Event,Presentation",
+                filter: booking => booking.Id == id).SingleOrDefault());
+          
         }
 
         /*[HttpPost("createNewBooking")]

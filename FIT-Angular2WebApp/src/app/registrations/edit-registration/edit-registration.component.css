@@ -1,0 +1,10 @@
+h1.header{
+  margin-left: 10%;
+  margin-right: 10%;
+  display:inline;
+}
+div.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

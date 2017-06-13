@@ -5,15 +5,19 @@ import {Company} from "./company.model";
 import {Location} from "./location.model";
 import {Presentation} from "./presentation.model";
 import {Category} from "./category.model";
-export interface Booking extends EntityObject{
+export class Booking extends EntityObject{
 
-  event:Event;
-  company:Company;
-  location:Location;
-  presentation:Presentation;
-  category:Category;
-  isAccepted:boolean;
+  constructor(public id:number,
+              public timestamp:string,
+              public event:Event,
+              public company:Company,
+              public location:Location,
+              public presentation:Presentation,
+              public category:Category,
+              public isAccepted:boolean){
 
+    super(id,timestamp);
+  }
 
 }
 

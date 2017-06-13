@@ -1,10 +1,14 @@
 
 import {EntityObject} from "./entityObject";
 import {Area} from "./area.model";
-export interface Location extends EntityObject{
+export class Location extends EntityObject{
 
-  number:number;
-  area:Area;
-  xCoordinate:number;
-  yCoordinate:number;
+  constructor(public id:number,
+              public timestamp:string,
+              public number:number,
+              public area:Area,
+              public xCoordinate:number,
+              public yCoordinate:number){
+    super(id,timestamp);
+  }
 }

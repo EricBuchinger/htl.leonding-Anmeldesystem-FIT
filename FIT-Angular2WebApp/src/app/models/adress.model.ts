@@ -1,7 +1,13 @@
 import {EntityObject} from "./entityObject";
-export interface Adress extends EntityObject{
-  city:string;
-  postalCode:string;
-  street:string;
-  number:string;
+export class Adress extends EntityObject{
+
+
+  constructor(public id,
+              public timestamp,
+              public city:string,
+              public postalCode:string,
+              public street:string,
+              public number:string){
+    super(id,timestamp);
+}
 }

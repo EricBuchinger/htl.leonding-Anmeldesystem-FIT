@@ -1,4 +1,9 @@
 import {EntityObject} from "./entityObject";
-export interface Detail extends EntityObject{
-  description:string;
+export class Detail extends EntityObject{
+
+  constructor(public id:number,
+              public timestamp:string,
+              public description:string){
+    super(id,timestamp);
+  }
 }

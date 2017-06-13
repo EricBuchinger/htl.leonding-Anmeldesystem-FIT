@@ -2,44 +2,41 @@
 <html>
 <head>
   <meta charset="UTF-8">
+
 </head>
 <body>
 
+<div class="alert alert-success" *ngIf="sucessfullDeleted() == true">
+  <strong [style.text-align]="center">Successfully deleted the booking!</strong>
+</div>
 
-<table>
+<table class="table table-striped">
   <tr>
-    <td>
-      <div class="overhead" [style.width]="'50px'" >#</div>
-    </td>
-    <td>
-      <div class="overhead" [style.width]="'120px'">Aktionen</div>
-    </td>
-    <td>
-      <div class="overhead" [style.width]="'200px'">Firmenname</div>
-    </td>
-    <td>
-      <div class="overhead" [style.width]="'100px'">Standplatz</div>
-    </td>
-    <td>
-      <div class="overhead" [style.width]="'300px'">Kontakt-Email</div>
-    </td>
-    <td>
-      <div class="overhead" [style.width]="'100px'">Abs-Club</div>
-    </td>
-    <td>
-      <div class="overhead" [style.width]="'100px'">Buchung</div>
-    </td>
-    <td>
-      <div class="overhead" [style.width]="'100px'">Status</div>
-    </td>
-
+    <th>
+      <button buttonStyle (click)="sortById()">#</button>
+    </th>
+    <th>
+      <button buttonStyle>Aktionen</button>
+    </th>
+    <th>
+      <button buttonStyle (click)="sortByCompanyName()">Firmenname</button>
+    </th>
+    <th>
+      <button buttonStyle (click)="sortbyArea()">Standplatz</button>
+    </th>
+    <th>
+      <button buttonStyle (click)="sortByEmail()">Kontakt-Email</button>
+    </th>
+    <th>
+      <button buttonStyle >Status</button>
+    </th>
   </tr>
   <tr *ngFor="let booking of bookings">
     <td>
       {{booking.id}}
     </td>
     <td >
-      <img src="../../assets/edit.ico" class="btn-default" height="20px" width="20px"/>
+      <img src="../../assets/edit.ico" class="btn-default" height="20px" width="20px" [routerLink]="booking.id"/>
       <img src="../../assets/delete.png" class="btn-default" height="20px" width="20px" (click)="deleteBooking(booking.id)"/>
       <img src="../../assets/pdf.png" class="btn-default" height="20px" width="20px"/>
     </td>
@@ -51,12 +48,6 @@
     </td>
     <td>
       {{booking.company.contact.person.email}}
-    </td>
-    <td>
-      empty
-    </td>
-    <td>
-      empty
     </td>
     <td>
       <div *ngIf="booking.isAccepted == true">
