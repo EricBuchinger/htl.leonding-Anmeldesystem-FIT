@@ -28,7 +28,10 @@ export class BookingHttpService{
         return Observable.of<Booking>()});
   }
   updateBooking(booking:Booking){
-    //return this.http.put()
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    return this.http.put(this.API_URL+"booking/"+booking.id, booking, {headers: headers})
+      .map((res:Response) => res.json());
+
   }
   declineBooking(bookingId:number){
     return this.http.get(this.API_URL+"updateBookingStatusDeclined/"+bookingId);

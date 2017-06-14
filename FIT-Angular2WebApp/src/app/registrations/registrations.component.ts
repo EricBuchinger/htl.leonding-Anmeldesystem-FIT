@@ -12,20 +12,17 @@ import {delay} from "rxjs/operator/delay";
   templateUrl: './registrations.component.html',
   styleUrls: ['./registrations.component.css']
 })
-  export class RegistrationsComponent implements OnInit {
+  export class RegistrationsComponent {
   private bookings: Booking[];
   deleted: boolean;
 
   constructor(private httpService: BookingHttpService) {
-
+    this.bookings = [];
+    this.getBookings();
   }
 
   sucessfullDeleted() {
     return this.deleted;
-  }
-
-  ngOnInit() {
-    this.getBookings();
   }
 
 

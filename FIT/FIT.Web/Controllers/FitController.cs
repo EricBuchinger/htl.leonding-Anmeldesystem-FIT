@@ -86,6 +86,18 @@ namespace FIT.Web.Controllers
           
         }
 
+        [Route("booking/{id}")]
+        [HttpPut]
+        public IActionResult UpdateBooking([FromBody] Booking booking)
+        {
+            this.iuow.BookingRepository.Update(booking);
+            this.iuow.CompanyRepository.Update(booking.Company);
+            this.iuow.AdressRepository.Update(booking.Company.Address);
+            this.iuow.PersonRepository.Update(booking.Company.Contact.Person);
+            this.iuow.Save();
+            return Ok(booking);
+        }
+
         /*[HttpPost("createNewBooking")]
         public IActionResult CreateNewBooking([FromBody] string jsonString)
         {

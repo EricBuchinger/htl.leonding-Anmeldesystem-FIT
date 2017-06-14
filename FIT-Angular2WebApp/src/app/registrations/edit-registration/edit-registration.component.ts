@@ -32,8 +32,8 @@ export class EditRegistrationComponent implements OnInit {
     this.router.navigate(['registrations']);
   }
   saveBooking(){
-    this.httpService.updateBooking(this.booking);
-    this.router.navigate(['registraions']);
+    this.httpService.updateBooking(this.booking).subscribe();
+    this.router.navigate(['registrations']);
   }
   acceptBooking() {
     this.httpService.acceptBooking(this.booking.id).subscribe();
