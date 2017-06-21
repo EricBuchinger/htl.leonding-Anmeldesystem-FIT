@@ -7821,15 +7821,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ericb\\.nuget\\packages\\": {}
+    "C:\\Users\\Patrick\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ericb\\Google Drive\\DocumentsForSchool\\Projects\\htl.leonding-Anmeldesystem-FIT\\FIT\\FIT.Web\\FIT.Web.csproj",
+      "projectUniqueName": "C:\\GitHub\\htl.leonding-Anmeldesystem-FIT\\FIT\\FIT.Web\\FIT.Web.csproj",
       "projectName": "FIT.Web",
-      "projectPath": "C:\\Users\\ericb\\Google Drive\\DocumentsForSchool\\Projects\\htl.leonding-Anmeldesystem-FIT\\FIT\\FIT.Web\\FIT.Web.csproj",
-      "outputPath": "C:\\Users\\ericb\\Google Drive\\DocumentsForSchool\\Projects\\htl.leonding-Anmeldesystem-FIT\\FIT\\FIT.Web\\obj\\",
+      "projectPath": "C:\\GitHub\\htl.leonding-Anmeldesystem-FIT\\FIT\\FIT.Web\\FIT.Web.csproj",
+      "outputPath": "C:\\GitHub\\htl.leonding-Anmeldesystem-FIT\\FIT\\FIT.Web\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "net46"
@@ -7837,11 +7837,11 @@
       "frameworks": {
         "net46": {
           "projectReferences": {
-            "C:\\Users\\ericb\\Google Drive\\DocumentsForSchool\\Projects\\htl.leonding-Anmeldesystem-FIT\\FIT\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\ericb\\Google Drive\\DocumentsForSchool\\Projects\\htl.leonding-Anmeldesystem-FIT\\FIT\\Model\\Model.csproj"
+            "C:\\GitHub\\htl.leonding-Anmeldesystem-FIT\\FIT\\Model\\Model.csproj": {
+              "projectPath": "C:\\GitHub\\htl.leonding-Anmeldesystem-FIT\\FIT\\Model\\Model.csproj"
             },
-            "C:\\Users\\ericb\\Google Drive\\DocumentsForSchool\\Projects\\htl.leonding-Anmeldesystem-FIT\\FIT\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\ericb\\Google Drive\\DocumentsForSchool\\Projects\\htl.leonding-Anmeldesystem-FIT\\FIT\\DataAccess\\DataAccess.csproj"
+            "C:\\GitHub\\htl.leonding-Anmeldesystem-FIT\\FIT\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\GitHub\\htl.leonding-Anmeldesystem-FIT\\FIT\\DataAccess\\DataAccess.csproj"
             }
           }
         }

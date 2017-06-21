@@ -45,3 +45,16 @@ C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin
 C:\Users\felix\Documents\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DataAccess.dll.config
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\Model.dll.config
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DbConsole.exe
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DbConsole.pdb
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DataAccess.dll
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.dll
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\Model.dll
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DataAccess.pdb
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\DataAccess.dll.config
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\Model.pdb
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\Model.dll.config
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.xml
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\DbConsole\obj\Debug\DbConsole.csprojResolveAssemblyReference.cache

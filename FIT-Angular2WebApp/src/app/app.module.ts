@@ -10,13 +10,15 @@ import {AlertModule} from 'ng2-bootstrap';
 import { ButtonStyleDirective } from './directives/button-style.directive';
 import { EditRegistrationComponent } from './registrations/edit-registration/edit-registration.component';
 import {routes} from "./app.routing";
+import { ToolbarComponent } from "app/toolbar/toolbar.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationsComponent,
     ButtonStyleDirective,
-    EditRegistrationComponent
+    EditRegistrationComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,

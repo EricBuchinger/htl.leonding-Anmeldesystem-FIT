@@ -38,3 +38,13 @@ C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesyst
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\Model\obj\Debug\Model.dll
 C:\Users\ericb\Google Drive\DocumentsForSchool\Projects\htl.leonding-Anmeldesystem-FIT\FIT\Model\obj\Debug\Model.pdb
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\Model\bin\Debug\Model.dll.config
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\Model\bin\Debug\Model.dll
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\Model\bin\Debug\Model.pdb
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\Model\bin\Debug\EntityFramework.dll
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\Model\bin\Debug\EntityFramework.xml
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\Model\obj\Debug\Model.dll
+C:\GitHub\htl.leonding-Anmeldesystem-FIT\FIT\Model\obj\Debug\Model.pdb

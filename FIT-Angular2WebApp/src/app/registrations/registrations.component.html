@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
+<app-toolbar (filterChanged)="filter = $event"></app-toolbar>
 
-</head>
-<body>
-
+<hr>
 <div class="alert alert-success" *ngIf="sucessfullDeleted() == true">
   <strong [style.text-align]="center">Successfully deleted the booking!</strong>
 </div>
@@ -31,7 +26,7 @@
       <button buttonStyle >Status</button>
     </th>
   </tr>
-  <tr *ngFor="let booking of bookings">
+  <tr *ngFor="let booking of getFilteredBookings()">
     <td>
       {{booking.id}}
     </td>
@@ -56,5 +51,3 @@
     </td>
   </tr>
 </table>
-</body>
-</html>

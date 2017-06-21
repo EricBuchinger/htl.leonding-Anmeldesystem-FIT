@@ -14,10 +14,12 @@ import {delay} from "rxjs/operator/delay";
 })
   export class RegistrationsComponent {
   private bookings: Booking[];
+  private filter: string;
   deleted: boolean;
 
   constructor(private httpService: BookingHttpService) {
     this.bookings = [];
+    this.filter = "";
     this.getBookings();
   }
 
@@ -41,7 +43,17 @@ import {delay} from "rxjs/operator/delay";
     this.httpService.getAllRegistrations().subscribe(res => this.bookings = res);
   }
 
+  getFilteredBookings(){
+    if(this.filter == ""){
+      return this.bookings;
+    } else if (this.filter == "confirmed") {
+      return this.bookings.filter(b => b.isAccepted);
+    } else if (this.filter == "abel") {
+      return this.bookings.filter(b => !b.isAccepted);
+    }
 
+    return [];
+  }
 
   sortById() {
     this.bookings.sort((a, b) => {
